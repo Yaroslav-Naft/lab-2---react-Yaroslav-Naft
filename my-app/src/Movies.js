@@ -19,9 +19,9 @@ export default class Movies extends Component {
         }
     }
     UpdateState(){
-        this.setState = {
+        this.setState({
             message: 'Message has been Changed!'
-        }
+        });
     }
 
     render() {
