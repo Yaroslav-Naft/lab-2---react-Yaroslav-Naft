@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { movieData } from "./data/movieData";
+import movieData from "./data/movieData";
 
 export default class Movies extends Component {
     render() {
