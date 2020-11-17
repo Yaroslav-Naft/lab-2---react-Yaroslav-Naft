@@ -67,6 +67,9 @@ export default class Movies extends Component {
                 date = {movieData[2].moviePoster}
                 /> */}
 
+<div>Message: {this.state.message}</div>
+
+
                 <button onClick={() => this.UpdateState()}>Update State</button>
                    </div>
 
