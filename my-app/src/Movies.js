@@ -11,20 +11,45 @@ function makeMovie(movieData){
 }
 
 export default class Movies extends Component {
-    constructor(){
-        super()
-        //put initial state of componenet
-        this.state = {
-            message: 'Test'
-        }
+
+constructor(props){
+    super(props);
+    this.state = {
+        movies: [],
+        rendered: false
     }
-    UpdateState(){
+}
+//When component has been sucessfully rendered react will automoatically call component did mount
+componentDidMount(){
+    fetch('')
+    //we convert moviesresult from API to JSON
+    .then(moviesresult => moviesresult.json())
+    //We pass the JSON data to the state of our component
+    .then(json => {
         this.setState({
-            message: 'Message has been Changed!'
-        });
-    }
+            movies: [],
+            rendered: true
+         })
+    })
+
+}
+
+
+    // constructor(){
+    //     super()
+    //     //put initial state of componenet
+    //     this.state = {
+    //         message: 'Test'
+    //     }
+    // }
+    // UpdateState(){
+    //     this.setState({
+    //         message: 'Message has been Changed!'
+    //     });
+    // }
 
     render() {
+
         return (
 
             // constructor(props){
@@ -56,18 +81,7 @@ export default class Movies extends Component {
                 title = {movieData[2].moviePoster}
                 date = {movieData[2].moviePoster}
                 /> */}
-<br></br>
-<br></br>
-<h1>Message: {this.state.message}</h1>
-<br></br>
-<br></br>
-
-                <button onClick={() => this.UpdateState()}>Update State</button>
-
-
-
                    </div>
-
                 </div>
         )
     }
