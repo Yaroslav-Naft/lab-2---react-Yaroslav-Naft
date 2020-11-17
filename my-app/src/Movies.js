@@ -11,8 +11,42 @@ function makeMovie(movieData){
 }
 
 export default class Movies extends Component {
+    constructor(){
+        super()
+        //put initial state of componenet
+        this.state = {
+            message: "Test"
+        }
+    }
+    UpdateState(){
+        this.setState = {
+            message: "Message has been Changed!"
+        }
+    }
+
+
+
+
+
     render() {
         return (
+
+            // constructor(props){
+            //     //super is necessary for the base react constructor to use the this keyword
+            //     super(props);
+            //     this.state = {
+            //         movies: [],
+            //         isLoaded: false
+            //     }
+
+            // }
+
+
+
+
+
+
+
                 <div class="container">
                     <div class="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
@@ -32,7 +66,10 @@ export default class Movies extends Component {
                 title = {movieData[2].moviePoster}
                 date = {movieData[2].moviePoster}
                 /> */}
+
+                <button onClick={() => this.UpdateState()}>Update State</button>
                    </div>
+
                 </div>
         )
     }
