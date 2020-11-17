@@ -1,3 +1,4 @@
+import 'bootstrap/dist/js/bootstrap';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -5,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'jquery';
 import 'popper.js';
-import 'bootstrap/dist/js/bootstrap';
+
 
 ReactDOM.render(
   <App />, document.getElementById('root')
