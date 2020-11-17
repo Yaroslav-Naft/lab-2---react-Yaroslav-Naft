@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 import movieData from "./data/movieData";
 
+function initiateMovie(){
+    
+
+}
+
+
+
+
 export default class Movies extends Component {
     render() {
         return (
