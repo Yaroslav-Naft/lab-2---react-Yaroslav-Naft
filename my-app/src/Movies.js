@@ -7,21 +7,21 @@ export default class Movies extends Component {
             <div>
                 <h1>Hello</h1>
                 <div class="container">
-                <span>Poster:{movieData.moviePoster[0]}</span>
-                <span>Title:{movieData.movieTitle[0]}</span>
-                <span>Date:{movieData.movieReleaseDate[0]}</span>
+                <div>Poster:{movieData[0].moviePoster}</div>
+                <div>Title:{movieData[0].movieTitle}</div>
+                <div>Date:{movieData[0].movieReleaseDate}</div>
                 </div>
 
                 <div class="container">
-                <span>Poster:{movieData.moviePoster[1]}</span>
-                <span>Title:{movieData.movieTitle[1]}</span>
-                <span>Date:{movieData.movieReleaseDate[1]}</span>
+                <div>Poster:{movieData[1].moviePoster}</div>
+                <div>Title:{movieData[1].movieTitle}</div>
+                <div>Date:{movieData[1].movieReleaseDate}</div>
                 </div>
 
                 <div class="container">
-                <span>Poster:{movieData.moviePoster[2]}</span>
-                <span>Title:{movieData.movieTitle[2]}</span>
-                <span>Date:{movieData.movieReleaseDate[2]}</span>
+                <div>Poster:{movieData[2].moviePoster}</div>
+                <div>Title:{movieData[2].movieTitle}</div>
+                <div>Date:{movieData[2].movieReleaseDate}</div>
                 </div>
 
 
