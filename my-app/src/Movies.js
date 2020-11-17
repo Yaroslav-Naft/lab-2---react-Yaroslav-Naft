@@ -15,18 +15,14 @@ export default class Movies extends Component {
         super()
         //put initial state of componenet
         this.state = {
-            message: "Test"
+            message: 'Test'
         }
     }
     UpdateState(){
         this.setState = {
-            message: "Message has been Changed!"
+            message: 'Message has been Changed!'
         }
     }
-
-
-
-
 
     render() {
         return (
@@ -40,12 +36,6 @@ export default class Movies extends Component {
             //     }
 
             // }
-
-
-
-
-
-
 
                 <div class="container">
                     <div class="row my-2 mx-2">
@@ -66,11 +56,16 @@ export default class Movies extends Component {
                 title = {movieData[2].moviePoster}
                 date = {movieData[2].moviePoster}
                 /> */}
-
-<div>Message: {this.state.message}</div>
-
+<br></br>
+<br></br>
+<h1>Message: {this.state.message}</h1>
+<br></br>
+<br></br>
 
                 <button onClick={() => this.UpdateState()}>Update State</button>
+
+
+
                    </div>
 
                 </div>
