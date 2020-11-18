@@ -21,7 +21,7 @@ constructor(props){
 }
 //When component has been sucessfully rendered react will automoatically call component did mount
 componentDidMount(){
-    fetch('')
+    fetch('https://api.themoviedb.org/3/movie/550?api_key=4bb3e5c49b10d81303e2fbea269898af')
     //we convert moviesresult from API to JSON
     .then(moviesresult => moviesresult.json())
     //We pass the JSON data to the state of our component
@@ -31,10 +31,7 @@ componentDidMount(){
             rendered: true
          })
     })
-
 }
-
-
     // constructor(){
     //     super()
     //     //put initial state of componenet
@@ -47,7 +44,6 @@ componentDidMount(){
     //         message: 'Message has been Changed!'
     //     });
     // }
-
     render() {
 
         return (
