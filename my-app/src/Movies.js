@@ -25,12 +25,13 @@ componentDidMount(){
     //we convert moviesresult from API to JSON
     .then(moviesresult => moviesresult.json())
     //We pass the JSON data to the state of our component
-    .then(json => {
-        this.setState({
-            movies: [],
-            rendered: true
-         })
-    })
+    // .then(json => {
+    //     this.setState({
+    //         movies: [],
+    //         rendered: true
+    //      })
+    .then(data => console.log(data))
+    // })
 }
     // constructor(){
     //     super()
