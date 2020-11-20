@@ -63,15 +63,12 @@ getByType() {
     .then((json) => {
         this.setState({
             movies: [],
-            rendered: false
+            rendered: true
         })
     })
     
 }
-
-
-
-
+|
     render() {
         //initializing values to define
         //choice variable
