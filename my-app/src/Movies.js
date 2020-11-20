@@ -18,6 +18,8 @@ constructor(props){
     super(props);
     this.state = {
         movies: [],
+        types: [],
+        selectedType: "",
         rendered: false
     }
 }
@@ -34,6 +36,26 @@ componentDidUpdate(_, prevState){
     this.getByType();
 }   
 
+getMovie(){
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=4bb3e5c49b10d81303e2fbea269898af')
+    //we convert moviesresult from API to JSON
+    .then(moviesresult => moviesresult.json())
+    //We pass the JSON data to the state of our component
+    .then(json => {
+        //variable movie declared in arrow function is
+        //a local var to that anonymous function
+    const types = types.map((movie) =>{return movie.types})
+         })
+    this.setState({
+        movies: json.results,
+        rendered: true
+
+
+
+
+    })
+}
+
 //When there is update we get a new state
 getByType() {
     const url = `https://fakestoreapi.com/products/category/${this.state.selectedType}`;
@@ -49,18 +71,7 @@ getByType() {
     
 }
 
-getMovie(){
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=4bb3e5c49b10d81303e2fbea269898af')
-    //we convert moviesresult from API to JSON
-    .then(moviesresult => moviesresult.json())
-    //We pass the JSON data to the state of our component
-    .then(json => {
-        this.setState({
-            movies: json.results,
-            rendered: true
-         })
-    })
-}
+
 
 
     render() {
@@ -72,26 +83,11 @@ getMovie(){
                 value: movieTypes,
                 label: movieTypes
             }
-        }
-        
-        
-        )
+        })
 
-
-
-        const { rendered, products, categories } = this.state;
-        const options = categories.map((category) => {
-          return {
-            value: category,
-            label: category
-          };
-        });
-
-        const {movies, rendered} = this.state;
         return (
-
                 <div class="container">
-                    <Select/>
+                    <Select options={options} onChange={this.handleSetType.bind(this)}/>
                     <div className="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
                     {movies.map(makeMovie)}
@@ -100,3 +96,4 @@ getMovie(){
         )
     }
 }
+commit
