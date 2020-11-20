@@ -15,7 +15,7 @@ export default class Movies extends Component {
 constructor(props){
     super(props);
     this.state = {
-        movieData: [],
+        movies: [],
         rendered: false
     }
 }
@@ -27,19 +27,20 @@ componentDidMount(){
     //We pass the JSON data to the state of our component
     .then(json => {
         this.setState({
-            movieData: [],
+            movies: [],
             rendered: true
          })
     })
 }
     render() {
 
-        const {movieData, rendered} = this.state;
+        const {movies, rendered} = this.state;
         return (
+
                 <div class="container">
                     <div className="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
-                    {movieData.map(makeMovie)}
+                    {movies.map(makeMovie)}
                    </div>
                 </div>
         )
