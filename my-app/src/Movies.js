@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import movieData from "./data/movieData";
 import MoviesItem from "./MoviesItem";
-import Select from react-select
+import Select from "react-select";
+
 
 const url="https://image.tmdb.org/t/p/w500";
+
 function makeMovie(movieData){
     return  <MoviesItem 
     key = {movieData.id}
@@ -41,7 +43,7 @@ getMovie(){
     //we convert moviesresult from API to JSON
     .then(moviesresult => moviesresult.json())
     //We pass the JSON data to the state of our componentc
-    .then(json => {
+    .then((json) => {
         //variable movie declared in arrow function is
         //a local var to that anonymous function
     const types = types.map((movie) =>{return movie.types})
@@ -62,7 +64,7 @@ getByType() {
     .then((result) => result.json())
     .then((json) => {
         this.setState({
-            movies: [],
+            movies: json.results,
             rendered: true
         })
     })
@@ -78,10 +80,9 @@ handleSetType(_selectedType) {
         //initializing values to define
         //choice variable
         const { rendered, movies, movieTypes} = this.state;
-        const options = movieTypes.map((movieTypes)=>{
+        const options = movieTypes.map((types)=>{
             return {
-                value: movieTypes,
-                label: movieTypes
+                value: movieTypes, label: movieTypes
             }
         })
 
@@ -96,4 +97,3 @@ handleSetType(_selectedType) {
         )
     }
 }
-commit
