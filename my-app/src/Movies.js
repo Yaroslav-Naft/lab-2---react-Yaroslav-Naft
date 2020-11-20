@@ -48,7 +48,7 @@ getMovie(){
 
 
    //******Part above commented out, uncomment later */     
-   //const types = json.map((movies) => {return movies.type})
+   const types = json.map((movies) => {return movies.type})
 
     this.setState({
         movies: json.results,
@@ -59,7 +59,7 @@ getMovie(){
 
 
         //******Part above commented out */
-        // types: Array.from(new Set(types)),
+        types: Array.from(new Set(types)),
         selectedType: ""
     })
     })  
