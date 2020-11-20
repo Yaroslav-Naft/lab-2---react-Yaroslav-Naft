@@ -34,18 +34,8 @@ componentDidMount(){
 }
     render() {
 
+        const {movies, rendered} = this.state;
         return (
-
-            // constructor(props){
-            //     //super is necessary for the base react constructor to use the this keyword
-            //     super(props);
-            //     this.state = {
-            //         movies: [],
-            //         isLoaded: false
-            //     }
-
-            // }
-
                 <div class="container">
                     <div className="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
