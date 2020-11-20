@@ -66,9 +66,14 @@ getByType() {
             rendered: true
         })
     })
-    
 }
-|
+
+handleSetType(_selectedType) {
+    this.setState({
+        selectedType: _selectedType.value
+    });
+  }
+
     render() {
         //initializing values to define
         //choice variable
