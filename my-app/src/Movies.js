@@ -46,14 +46,15 @@ getMovie(){
     .then((json) => {
         //variable movie declared in arrow function is
         //a local var to that anonymous function
-    const types = types.map((movie) =>{return movie.types})
-         })
+    const types = types.map((movies) => {return movies.types})
+
     this.setState({
         movies: json.results,
         rendered: true,
         types: Array.from(new Set(types)),
         selectedType: ""
     })
+    })  
 }
 
 //When there is update we get a new state
@@ -79,13 +80,12 @@ handleSetType(_selectedType) {
     render() {
         //initializing values to define
         //choice variable
-        const { rendered, movies, movieTypes} = this.state;
-        const options = movieTypes.map((types)=>{
+        const { rendered, movies, types} = this.state;
+        const options = types.map((typevar)=>{
             return {
-                value: movieTypes, label: movieTypes
+                value: typevar, label: typevar
             }
         })
-
         return (
                 <div class="container">
                     <Select options={options} onChange={this.handleSetType.bind(this)}/>
