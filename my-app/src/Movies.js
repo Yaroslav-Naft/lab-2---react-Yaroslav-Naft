@@ -49,12 +49,6 @@ getByType() {
     
 }
 
-
-
-
-
-
-
 getMovie(){
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=4bb3e5c49b10d81303e2fbea269898af')
     //we convert moviesresult from API to JSON
@@ -70,11 +64,34 @@ getMovie(){
 
 
     render() {
+        //initializing values to define
+        //choice variable
+        const { rendered, movies, movieTypes} = this.state;
+        const options = movieTypes.map((movieTypes)=>{
+            return {
+                value: movieTypes,
+                label: movieTypes
+            }
+        }
+        
+        
+        )
+
+
+
+        const { rendered, products, categories } = this.state;
+        const options = categories.map((category) => {
+          return {
+            value: category,
+            label: category
+          };
+        });
 
         const {movies, rendered} = this.state;
         return (
 
                 <div class="container">
+                    <Select/>
                     <div className="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
                     {movies.map(makeMovie)}
