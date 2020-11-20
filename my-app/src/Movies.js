@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import movieData from "./data/movieData";
-import movieDataItem from "./movieDataItem";
+import MoviesItem from "./MoviesItem";
 
 function makeMovie(movieData){
-    return  <movieDataItem 
+    return  <MoviesItem 
     key = {movieData.id}
     poster = {movieData.moviePoster}
     title = {movieData.moviePoster}
     date = {movieData.moviePoster} />;
 }
 
-export default class movieData extends Component {
+export default class Movies extends Component {
 
 constructor(props){
     super(props);
@@ -22,8 +22,8 @@ constructor(props){
 //When component has been sucessfully rendered react will automoatically call component did mount
 componentDidMount(){
     fetch('https://api.themoviedb.org/3/movie/550?api_key=4bb3e5c49b10d81303e2fbea269898af')
-    //we convert movieDataresult from API to JSON
-    .then(movieDataresult => movieDataresult.json())
+    //we convert moviesresult from API to JSON
+    .then(moviesresult => moviesresult.json())
     //We pass the JSON data to the state of our component
     .then(json => {
         this.setState({
