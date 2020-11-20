@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import movieData from "./data/movieData";
 import MoviesItem from "./MoviesItem";
+import Select from react-select
 
 const url="https://image.tmdb.org/t/p/w500";
 function makeMovie(movieData){
