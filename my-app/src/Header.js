@@ -4,11 +4,9 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-              <h1 className="display-4">Header</h1>
-
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html">WALKABOOKS</a>
+        <a class="navbar-brand" href="index.html">The Movies Database</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -29,7 +27,7 @@ export default class Header extends Component {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="books.html">Books</a>
+              <a class="nav-link" href="books.html">Movies</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about-us.html">About Us</a>
