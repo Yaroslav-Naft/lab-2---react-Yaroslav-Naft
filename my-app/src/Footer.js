@@ -31,7 +31,7 @@ export default class Footer extends Component {
         </div>
         {/* <!--End of the Second Footer Column--> */}
 
-        <div class="social-footer">
+        {/* <div class="social-footer">
           <h5>Follow us</h5>
           <ul>
           <li><a href="#"><i class="fa fa-facebook-square" style="font-size:30px"></i></a></li>
@@ -39,7 +39,7 @@ export default class Footer extends Component {
                  <li> <a href="#"><i class="fa fa-twitter-square" style="font-size:30px"></i></a></li>
               </ul>
 
-      </div>
+      </div> */}
         {/* <!--End of the Third Footer Column--> */}
 
         {/* <div class="contact-us-footer">
@@ -78,14 +78,14 @@ export default class Footer extends Component {
       {/* <!-- End of Container Footer --> */}
 
       {/* <!-- Copyright--> */}
-      {/* <div class="copyright">
+      <div class="copyright">
         <p class="m-0 text-center text-white"
-          >Copyright &copy; <a href="index.html">WalkaBooks 2020</a> <br />
+          >Copyright &copy; <a href="index.html">The Movies Database</a> <br />
           <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy </a> |
           <a href="#"> Site Map </a> |
-          <a href="credits.html">Photo Credits</a></p
+          <a href="credits.html">Sources</a></p
         >
-      </div> */}
+      </div>
       {/* <!-- End of Copyright --> */}
     </footer>
     {/* <!-- End of Footer --> */}
