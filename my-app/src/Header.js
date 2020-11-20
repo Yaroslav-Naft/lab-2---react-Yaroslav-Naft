@@ -6,8 +6,6 @@ export default class Header extends Component {
             <div>
               <h1 className="display-4">Header</h1>
 
-{/* 
-
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">WALKABOOKS</a>
@@ -39,7 +37,7 @@ export default class Header extends Component {
             <li class="nav-item">
               <a class="nav-link" href="contact-us.html">Contact Us</a>
             </li>
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <a class="nav-link" href="registration.html">
                 <i class="fa fa-user-circle" style="font-size: 32px"></i>
               </a>
@@ -49,11 +47,11 @@ export default class Header extends Component {
                 <i class="fa fa-shopping-cart" style="font-size: 32px"></i
                 ><span id="cart-icon-count">0</span></a
               >
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
-    </nav> */}
+    </nav>
 
 
 
