@@ -25,26 +25,13 @@ componentDidMount(){
     //we convert moviesresult from API to JSON
     .then(moviesresult => moviesresult.json())
     //We pass the JSON data to the state of our component
-    // .then(json => {
-    //     this.setState({
-    //         movies: [],
-    //         rendered: true
-    //      })
-    .then(data => console.log(data))
-    // })
+    .then(json => {
+        this.setState({
+            movies: [],
+            rendered: true
+         })
+    })
 }
-    // constructor(){
-    //     super()
-    //     //put initial state of componenet
-    //     this.state = {
-    //         message: 'Test'
-    //     }
-    // }
-    // UpdateState(){
-    //     this.setState({
-    //         message: 'Message has been Changed!'
-    //     });
-    // }
     render() {
 
         return (
@@ -60,24 +47,9 @@ componentDidMount(){
             // }
 
                 <div class="container">
-                    <div class="row my-2 mx-2">
+                    <div className="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
                     {movieData.map(makeMovie)}
-                {/* <MoviesItem 
-                poster = {movieData[0].moviePoster}
-                title = {movieData[0].moviePoster}
-                date = {movieData[0].moviePoster}
-                />
-                <MoviesItem 
-                poster = {movieData[1].moviePoster}
-                title = {movieData[1].moviePoster}
-                date = {movieData[1].moviePoster}
-                />
-                <MoviesItem 
-                poster = {movieData[2].moviePoster}
-                title = {movieData[2].moviePoster}
-                date = {movieData[2].moviePoster}
-                /> */}
                    </div>
                 </div>
         )
