@@ -6,7 +6,7 @@ function makeMovie(movieData){
     return  <MoviesItem 
     key = {movieData.id}
     poster ={"https://image.tmdb.org/t/p/"+"w500"+movieData.moviePoster}
-    title = {movieData.moviePoster}
+    title = {movieData.title}
     date = {movieData.release_date} />;
 }
 
