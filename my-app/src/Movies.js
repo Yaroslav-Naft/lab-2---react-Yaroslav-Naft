@@ -5,9 +5,9 @@ import MoviesItem from "./MoviesItem";
 function makeMovie(movieData){
     return  <MoviesItem 
     key = {movieData.id}
-    poster = {movieData.moviePoster}
+    poster ={"https://image.tmdb.org/t/p/"+"w500"+movieData.moviePoster}
     title = {movieData.moviePoster}
-    date = {movieData.moviePoster} />;
+    date = {movieData.release_date} />;
 }
 
 export default class Movies extends Component {
@@ -40,7 +40,7 @@ componentDidMount(){
                 <div class="container">
                     <div className="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
-                    {movies.map(makeMovie)}
+                    {movieData.map(makeMovie)}
                    </div>
                 </div>
         )
