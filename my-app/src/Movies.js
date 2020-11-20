@@ -30,7 +30,7 @@ componentDidMount(){
     this.getMovie();
 }
 
-//Updating State when there is a change
+//Updating State occurs when componenet has changed
 componentDidUpdate(_, prevState){
     if (this.state === prevState) {
         return;
@@ -42,16 +42,24 @@ getMovie(){
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=4bb3e5c49b10d81303e2fbea269898af')
     //we convert moviesresult from API to JSON
     .then(moviesresult => moviesresult.json())
-    //We pass the JSON data to the state of our componentc
+    //We pass the JSON data to the state of our component
     .then((json) => {
-        //variable movie declared in arrow function is
-        //a local var to that anonymous function
-    const types = types.map((movies) => {return movies.types})
+        //get only the movies for the selected type
+
+
+   //******Part above commented out, uncomment later */     
+   //const types = json.map((movies) => {return movies.type})
 
     this.setState({
         movies: json.results,
         rendered: true,
-        types: Array.from(new Set(types)),
+        //Set used to remove duplicate
+        //Array.from use to convert set
+        //back to an array
+
+
+        //******Part above commented out */
+        // types: Array.from(new Set(types)),
         selectedType: ""
     })
     })  
@@ -59,7 +67,10 @@ getMovie(){
 
 //When there is update we get a new state
 getByType() {
-    const url = `https://fakestoreapi.com/products/category/${this.state.selectedType}`;
+    // const url = `https://fakestoreapi.com/products/category/${this.state.selectedType}`;
+
+    const url = `fetch('https://api.themoviedb.org/3/movie/${this.state.selectedType}?api_key=4bb3e5c49b10d81303e2fbea269898af')`;
+
 
     fetch(url)
     .then((result) => result.json())
@@ -81,9 +92,9 @@ handleSetType(_selectedType) {
         //initializing values to define
         //choice variable
         const { rendered, movies, types} = this.state;
-        const options = types.map((typevar)=>{
+        const options = types.map((type)=>{
             return {
-                value: typevar, label: typevar
+                value: type, label: type
             }
         })
         return (
