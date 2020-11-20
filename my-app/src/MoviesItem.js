@@ -13,7 +13,7 @@ export default class MoviesItem extends Component {
                 <div class="card-body border-top text-center">
                 <div class="card-text">
                     <a href="index.html" class="card-link title"><h5 class="card-title text-muted">{ this.props.title }</h5></a>
-                <div class="price mt-1">${this.props.date }</div>
+                <div class="price mt-1">{this.props.date }</div>
                 </div>
             </div>
             </div>

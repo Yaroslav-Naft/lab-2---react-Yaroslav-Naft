@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import movieData from "./data/movieData";
 import MoviesItem from "./MoviesItem";
 
+const url="https://image.tmdb.org/t/p/w500";
 function makeMovie(movieData){
     return  <MoviesItem 
     key = {movieData.id}
-    poster ={"https://image.tmdb.org/t/p/"+"w500"+movieData.moviePoster}
+    poster ={url + movieData.poster_path}
     title = {movieData.title}
     date = {movieData.release_date} />;
 }
@@ -21,13 +22,13 @@ constructor(props){
 }
 //When component has been sucessfully rendered react will automoatically call component did mount
 componentDidMount(){
-    fetch('https://api.themoviedb.org/3/movie/550?api_key=4bb3e5c49b10d81303e2fbea269898af')
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=4bb3e5c49b10d81303e2fbea269898af')
     //we convert moviesresult from API to JSON
     .then(moviesresult => moviesresult.json())
     //We pass the JSON data to the state of our component
     .then(json => {
         this.setState({
-            movies: [],
+            movies: json.results,
             rendered: true
          })
     })
@@ -40,7 +41,7 @@ componentDidMount(){
                 <div class="container">
                     <div className="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
-                    {movieData.map(makeMovie)}
+                    {movies.map(makeMovie)}
                    </div>
                 </div>
         )
