@@ -24,6 +24,7 @@ constructor(props){
         selectedType: "",
         rendered: false
     }
+    this.handleSetType = this.handleSetType.bind(this);
 }
 //When component has been sucessfully rendered react will automoatically call component did mount
 componentDidMount(){
@@ -46,33 +47,24 @@ getMovie(){
     .then((json) => {
         //get only the movies for the selected type
 
-
-   //******Part above commented out, uncomment later */     
-   const types = json.map((movies) => {return movies.type})
-
     this.setState({
         movies: json.results,
         rendered: true,
-        //Set used to remove duplicate
-        //Array.from use to convert set
-        //back to an array
-
-
-        //******Part above commented out */
-        types: Array.from(new Set(types)),
-        selectedType: ""
+        types: ["popular", "top_rated", "now playing", "upcoming"],
+        //Default type on initialization
+        selectedType: "popular"
     })
     })  
 }
 
-//When there is update we get a new state
+//When there is update to the type
+//run command below
+//and change the url to show the
+//movies for the selected type
 getByType() {
-    // const url = `https://fakestoreapi.com/products/category/${this.state.selectedType}`;
+    const link =`https://api.themoviedb.org/3/movie/${this.state.selectedType}?api_key=4bb3e5c49b10d81303e2fbea269898af`;
 
-    const url = `fetch('https://api.themoviedb.org/3/movie/${this.state.selectedType}?api_key=4bb3e5c49b10d81303e2fbea269898af')`;
-
-
-    fetch(url)
+    fetch(link)
     .then((result) => result.json())
     .then((json) => {
         this.setState({
@@ -89,16 +81,23 @@ handleSetType(_selectedType) {
   }
 
     render() {
+        const { movies, rendered} = this.state;
         //initializing values to define
         //choice variable
-        const { rendered, movies, types} = this.state;
-        const options = types.map((type)=>{
-            return {
-                value: type, label: type
-            }
-        })
+        if(this.rendered == false){
+         <div>Component Loading....</div>           
+        }
+        else{
+
+        const options = [
+               {value: "popular", label: "Popular Movies"  },
+               {value: "upcoming", label: "Upcoming Movies"  },
+               {value: "top_rated", label: "Top Rated Movies"  },
+               {value: "now_playing", label: "Now Playing"  },               
+            ];
+        
         return (
-                <div class="container">
+                <div className="container">
                     <Select options={options} onChange={this.handleSetType.bind(this)}/>
                     <div className="row my-2 mx-2">
                     {/* .map function loops through the Data and inserts each instance into the function     */}
@@ -106,5 +105,6 @@ handleSetType(_selectedType) {
                    </div>
                 </div>
         )
+        }
     }
 }
