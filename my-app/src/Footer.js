@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import { FaFacebookSquare } from "react-icons/fa";
+import { FaFacebookSquare} from "react-icons/fa";
 import { FaLinkedin } from 'react-icons/fa';
 import { FaTwitterSquare } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
-import { Famapmarker } from 'react-icons/fa';
+import { FaMapMarker } from 'react-icons/fa';
 
 
 export default class Footer extends Component {
     render() {
         return (
             <div>
-
 
 {/* <!-- Footer --> */}
     <footer>
@@ -45,30 +44,27 @@ export default class Footer extends Component {
                   <li><a href="#"><FaLinkedin /></a></li>
                  <li> <a href="#"><FaTwitterSquare /></a></li>
               </ul>
-
       </div>
         {/* <!--End of the Third Footer Column--> */}
-        {/* <div class="contact-us-footer">
+        <div class="contact-us-footer">
           <ul class="contact">
             <h5>Contact Us</h5>
             <li
               ><a href="#"
-                ><i class="fa fa-envelope" style="font-size: 30px"></i
-              ></a>
+                ><FaEnvelope/></a>
             </li>
             <li
               ><a href="#"
-                ><i class="fa fa-phone" style="font-size: 30px"></i></a
+                ><FaPhone/></a
             ></li>
             <li
               ><a href="#"
-                ><i class="fa fa-map-marker" style="font-size: 30px"></i></a
+                ><FaMapMarker/></a
             ></li>
           </ul>
-        </div> */}
+        </div>
       </div>
       {/* <!-- End of Container Footer --> */}
-
       {/* <!-- Copyright--> */}
       <div class="copyright">
         <p class="m-0 text-center text-white"
@@ -81,15 +77,7 @@ export default class Footer extends Component {
       {/* <!-- End of Copyright --> */}
     </footer>
     {/* <!-- End of Footer --> */}
-
-     
-
-
-
-
-
-
-            </div>
+  </div>
         )
     }
 }
