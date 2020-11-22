@@ -1,4 +1,11 @@
 import React, { Component } from 'react'
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaLinkedin } from 'react-icons/fa';
+import { FaTwitterSquare } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
+import { Famapmarker } from 'react-icons/fa';
+
 
 export default class Footer extends Component {
     render() {
@@ -31,17 +38,16 @@ export default class Footer extends Component {
         </div>
         {/* <!--End of the Second Footer Column--> */}
 
-        {/* <div class="social-footer">
+        <div class="social-footer">
           <h5>Follow us</h5>
           <ul>
-          <li><a href="#"><i class="fa fa-facebook-square" style="font-size:30px"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a></li>
-                 <li> <a href="#"><i class="fa fa-twitter-square" style="font-size:30px"></i></a></li>
+          <li><a href="#"><FaFacebookSquare /></a></li>
+                  <li><a href="#"><FaLinkedin /></a></li>
+                 <li> <a href="#"><FaTwitterSquare /></a></li>
               </ul>
 
-      </div> */}
+      </div>
         {/* <!--End of the Third Footer Column--> */}
-
         {/* <div class="contact-us-footer">
           <ul class="contact">
             <h5>Contact Us</h5>
@@ -59,20 +65,6 @@ export default class Footer extends Component {
                 ><i class="fa fa-map-marker" style="font-size: 30px"></i></a
             ></li>
           </ul>
-        </div> */}
-
-        {/* <div class="map">
-          <h6>1111, Seymor Street, Vancouver, BC</h6>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10410.510865752853!2d-123.1152548!3d49.2834511!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb4e03bf432e66714!2sBCIT%20Downtown%20Campus!5e0!3m2!1sen!2sca!4v1602882765225!5m2!1sen!2sca"
-            width="230"
-            height="100"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
         </div> */}
       </div>
       {/* <!-- End of Container Footer --> */}
