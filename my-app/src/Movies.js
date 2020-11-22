@@ -98,9 +98,15 @@ handleSetType(_selectedType) {
         
         return (
                 <div className="container">
-                    <Select options={options} onChange={this.handleSetType.bind(this)}/>
+                    {/* <br></br>
+                    <br></br> */}
+                    <div class="m-5">
+                    <h3 class="h5 text-primary">Select Movies by:</h3><Select options={options} onChange={this.handleSetType.bind(this)}/>
+                    </div>
+                    {/* <br></br>
+                    <br></br> */}
                     <div className="row my-2 mx-2">
-                    {/* .map function loops through the Data and inserts each instance into the function     */}
+                    {/* .map function loops through the Data and inserts each instance into the function */}
                     {movies.map(makeMovie)}
                    </div>
                 </div>
