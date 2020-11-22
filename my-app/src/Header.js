@@ -35,17 +35,6 @@ export default class Header extends Component {
             <li class="nav-item">
               <a class="nav-link" href="contact-us.html">Contact Us</a>
             </li>
-            {/* <li class="nav-item">
-              <a class="nav-link" href="registration.html">
-                <i class="fa fa-user-circle" style="font-size: 32px"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cart.html">
-                <i class="fa fa-shopping-cart" style="font-size: 32px"></i
-                ><span id="cart-icon-count">0</span></a
-              >
-            </li> */}
           </ul>
         </div>
       </div>
