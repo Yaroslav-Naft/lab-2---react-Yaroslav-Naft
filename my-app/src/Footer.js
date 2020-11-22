@@ -28,11 +28,10 @@ export default class Footer extends Component {
         <div class="cart-footer">
           <h5>Customer Care</h5>
           <ul>
-            <li><a href="#">Gift Cards</a></li>
-            <li><a href="#">Ordering</a></li>
-            <li><a href="#">Payment</a></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Returns</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
         {/* <!--End of the Second Footer Column--> */}
