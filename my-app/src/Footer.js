@@ -18,9 +18,9 @@ export default class Footer extends Component {
         <div class="about-footer">
           <h5>About Us</h5>
           <ul>
-            <li><a href="#">Who We Are</a></li>
-            <li><a href="#">Our Store</a></li>
-            <li><a href="#">Stores Near to Me</a></li>
+            <li><a href="/#">Who We Are</a></li>
+            <li><a href="/#">Our Store</a></li>
+            <li><a href="/#">Stores Near to Me</a></li>
           </ul>
         </div>
         {/* <!--End of the First Footer Column--> */}
@@ -28,10 +28,10 @@ export default class Footer extends Component {
         <div class="cart-footer">
           <h5>Customer Care</h5>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="/#">Home</a></li>
+            <li><a href="/#">Movies</a></li>
+            <li><a href="/#">About us</a></li>
+            <li><a href="/#">Contact Us</a></li>
           </ul>
         </div>
         {/* <!--End of the Second Footer Column--> */}
@@ -39,9 +39,9 @@ export default class Footer extends Component {
         <div class="social-footer">
           <h5>Follow us</h5>
           <ul>
-          <li><a href="#"><FaFacebookSquare /></a></li>
-                  <li><a href="#"><FaLinkedin /></a></li>
-                 <li> <a href="#"><FaTwitterSquare /></a></li>
+          <li><a href="/#"><FaFacebookSquare /></a></li>
+                  <li><a href="/#"><FaLinkedin /></a></li>
+                 <li> <a href="/#"><FaTwitterSquare /></a></li>
               </ul>
       </div>
         {/* <!--End of the Third Footer Column--> */}
@@ -49,15 +49,15 @@ export default class Footer extends Component {
           <ul class="contact">
             <h5>Contact Us</h5>
             <li
-              ><a href="#"
+              ><a href="/#"
                 ><FaEnvelope/></a>
             </li>
             <li
-              ><a href="#"
+              ><a href="/#"
                 ><FaPhone/></a
             ></li>
             <li
-              ><a href="#"
+              ><a href="/#"
                 ><FaMapMarker/></a
             ></li>
           </ul>
@@ -68,8 +68,8 @@ export default class Footer extends Component {
       <div class="copyright">
         <p class="m-0 text-center text-white"
           >Copyright &copy; <a href="index.html">The Movies Database</a> <br />
-          <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy </a> |
-          <a href="#"> Site Map </a> |
+          <a href="/#">Terms & Conditions</a> | <a href="/#">Privacy Policy </a> |
+          <a href="/#"> Site Map </a> |
           <a href="credits.html">Sources</a></p
         >
       </div>

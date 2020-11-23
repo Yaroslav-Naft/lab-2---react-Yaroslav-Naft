@@ -84,8 +84,7 @@ handleSetType(_selectedType) {
     render() {
         const { movies, rendered} = this.state;
         //initializing values to define
-        //choice variable
-        if(rendered === false){
+        if(this.rendered === false){
          <div>Component Loading....</div>           
         }
         else{
