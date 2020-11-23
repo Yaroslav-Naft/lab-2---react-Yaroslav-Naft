@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import MoviesItem from "./MoviesItem";
 import Select from "react-select";
 
-
 //stored the constant part of the url into a variable
 const url="https://image.tmdb.org/t/p/w500";
 
