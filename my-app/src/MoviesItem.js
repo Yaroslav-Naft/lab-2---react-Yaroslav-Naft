@@ -14,17 +14,7 @@ export default class MoviesItem extends Component {
                 </div>
             </div>
             </div>
-
-
         </div>
-
-
-
-
-
-
-
-
         )
     }
 }
